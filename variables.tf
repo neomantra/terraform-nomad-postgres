@@ -11,6 +11,12 @@ variable "nomad_namespace" {
   default     = "default"
 }
 
+variable "nomad_node" {
+  type        = string
+  description = "Nomad node to constrain with node.unique.name"
+  default     = ""
+}
+
 variable "nomad_host_volume" {
   type        = string
   description = "Nomad Host Volume"

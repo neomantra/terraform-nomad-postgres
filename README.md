@@ -103,6 +103,7 @@ module "postgres" {
 |------|-------------|------|---------|:--------:|
 | nomad_datacenters | Nomad data centers | list(string) | ["*"] | no |
 | nomad_namespace | [Enterprise] Nomad namespace | string | "default" | no |
+| nomad_node | Nomad node to constrain with `node.unique.name` | string | "" | no |
 | nomad_host_volume | Nomad host volume name | string | "" | no |
 | nomad_csi_volume | Nomad CSI volume name to mount | string | "" | no |
 | nomad_csi_volume_extra | Extra config to inject in Nomad's CSI volume stanza | string | "" | no |

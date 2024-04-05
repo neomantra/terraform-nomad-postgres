@@ -3,6 +3,13 @@ job "${service_name}" {
   datacenters = ${datacenters}
   namespace   = "${namespace}"
 
+%{ if "${nomad_node}" != "" }
+  constraint {
+    attribute = "$${node.unique.name}"
+    value     = "${nomad_node}"
+  }
+%{ endif }
+
   update {
     max_parallel      = 1
     health_check      = "${update_health_check}"
